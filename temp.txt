@@ -1,2 +1,7 @@
 sqlcmd -S localhost -U SA -Q "BACKUP LOG [sample] TO DISK = N'/home/coder/project/workspace/sample_LogBackup.sql'"
-sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [sample] FROM DISK = N'/home/coder/project/workspace/sample_LogBackup.sql' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [backupdb] FROM DISK = N'/home/coder/project/workspace/sample_LogBackup.sql' NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
+ alter database [sample] set single_user with rollback immediate
+
+
+
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [sample] FROM DISK = N'/home/coder/project/workspace/sample_LogBackup.sql'"
