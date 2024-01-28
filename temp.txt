@@ -1,0 +1,2 @@
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [sample] TO DISK = N'/home/coder/project/workspace/sample_LogBackup.sql'"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [sample] FROM DISK = N'/home/coder/project/workspace/sample_LogBackup.sql' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
