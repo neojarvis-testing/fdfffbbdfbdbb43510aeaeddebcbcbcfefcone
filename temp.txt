@@ -16,4 +16,4 @@ sqlcmd -S localhost -U SA -P examlyMssql@123 -Q "CREATE DATABASE IF NOT EXISTS a
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [app] TO DISK = N'/home/coder/project/workspace/ba1.bak'"
 
 temp
-chmod 777 /home/coder/project/workspace && sqlcmd -S localhost -U SA -P examlyMssql@123 -Q "BACKUP DATABASE appdb TO DISK = '/home/coder/project/workspace/backup3.bak'"
+chmod 777 /home/coder/project/workspace && sqlcmd -S localhost -U SA -P examlyMssql@123 -Q "BACKUP DATABASE appdb TO DISK = '/home/coder/project/workspace/backup5.bak'"
