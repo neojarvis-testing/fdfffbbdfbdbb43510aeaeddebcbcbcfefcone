@@ -1,6 +1,6 @@
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [new] TO DISK = N'/home/coder/project/workspace/newbackupdb.sql'"
 sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [gokuldb] FROM DISK = N'/home/coder/project/workspace/gokuldb.bak' WITH NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
- alter database [gokuldb] set single_user with rollback immediate
+ alter database [new] set single_user with rollback immediate
 
 
 
