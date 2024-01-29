@@ -17,3 +17,5 @@ sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [app] TO DISK = N'/home/coder/proj
 
 temp
 chmod 777 /home/coder/project/workspace && sqlcmd -S localhost -U SA -P examlyMssql@123 -Q "BACKUP DATABASE appdb TO DISK = '/home/coder/project/workspace/backup5.bak'"
+
+hello
